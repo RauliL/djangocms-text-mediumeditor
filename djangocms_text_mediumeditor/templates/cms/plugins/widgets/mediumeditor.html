@@ -1,0 +1,13 @@
+{% load admin_static cms_static %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static "djangocms_text_mediumeditor/css/medium-editor.min.css" %}" />
+{% endblock %}
+
+{% block extrahead %}
+    <script type="text/javascript" src="{% static "djangocms_text_mediumeditor/js/medium-editor.min.js" %}"></script>
+{% endblock %}
+
+<script type="text/javascript">
+    new MediumEditor("#{{ editor_id }}")();
+</script>
