@@ -10,6 +10,9 @@ from django.utils.translation import ugettext_lazy as _
 
 from cms.models import CMSPlugin
 
+from . import settings
+from .sanitizer import clean_html
+
 
 __all__ = ("MediumEditorText",)
 
@@ -24,3 +27,9 @@ class MediumEditorText(CMSPlugin):
 
     def __str__(self):
         return Truncator(strip_tags(self.body)).words(3, truncate="...")
+
+    def save(self, **kwargs):
+        # Override `save` method so that HTML can be sanitized.
+        if settings.TEXT_MEDIUMEDITOR_HTML_SANITIZE:
+            self.body = clean_html(self.body)
+        super(MediumEditorText, self).save(**kwargs)

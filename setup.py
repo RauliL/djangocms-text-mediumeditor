@@ -5,6 +5,7 @@ from setuptools import setup
 
 
 INSTALL_REQUIRES = [
+    "bleach>=1.4",
     "django-cms>=3.3.0",
 ]
 

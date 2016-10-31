@@ -1,1 +1,2 @@
+bleach>=1.4
 django-cms>=3.3
