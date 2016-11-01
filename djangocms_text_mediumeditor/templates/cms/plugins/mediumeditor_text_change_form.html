@@ -1,0 +1,17 @@
+{% extends "admin/cms/page/plugin/change_form.html" %}
+
+{% block field_sets %}
+    {% for fieldset in adminform %}
+        <fieldset class="{{ fieldset.classes }}">
+            {% for line in fieldset %}
+                {% for field in line %}
+                    {% if field.is_readonly %}
+                        <p>{{ field.contents }}</p>
+                    {% else %}
+                        {{ field.field }}    
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </fieldset>
+    {% endfor %}
+{% endblock %}
