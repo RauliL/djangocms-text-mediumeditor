@@ -20,7 +20,7 @@ class MediumEditorWidget(Textarea):
         else:
             if not attrs:
                 attrs = {}
-            attrs["id"] = "mediumeditor_%s" % (uuid.uuid4(),)
+            editor_id = attrs["id"] = "mediumeditor_%s" % (uuid.uuid4(),)
 
         context = {"editor_id": editor_id}
 
