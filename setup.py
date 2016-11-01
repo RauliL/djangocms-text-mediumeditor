@@ -19,10 +19,13 @@ setup(
     url="https://github.com/RauliL/djangocms-text-mediumeditor",
     packages=[
         "djangocms_text_mediumeditor",
+        "djangocms_text_mediumeditor.migrations",
     ],
     install_requires=INSTALL_REQUIRES,
     license="LICENSE",
     platforms=["OS Independent"],
+    include_package_data=True,
+    zip_safe=False,
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
