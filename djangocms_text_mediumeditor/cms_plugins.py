@@ -15,7 +15,7 @@ class MediumEditorTextPlugin(CMSPluginBase):
     model = MediumEditorText
     form = MediumEditorTextForm
     name = _("Text")
-    render_template = "cms/plugins/mediumeditor-text.html"
+    render_template = "cms/plugins/mediumeditor_text.html"
 
     def render(self, context, instance, placeholder):
         context.update({
