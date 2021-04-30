@@ -2,6 +2,8 @@
 
 from __future__ import unicode_literals
 
+import uuid
+
 from django.utils.translation import ugettext_lazy as _
 
 from cms.plugin_base import CMSPluginBase
@@ -23,6 +25,7 @@ class MediumEditorTextPlugin(CMSPluginBase):
             "body": instance.body,
             "placeholder": placeholder,
             "object": instance,
+            "editor_id": "mediumeditor_%s" % uuid.uuid4(),
         })
         return context
 
