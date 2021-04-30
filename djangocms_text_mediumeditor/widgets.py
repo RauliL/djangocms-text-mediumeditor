@@ -14,7 +14,7 @@ class MediumEditorWidget(Textarea):
     def __init__(self, attrs=None):
         super(Textarea, self).__init__(attrs)
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None):
         if attrs and "id" in attrs:
             editor_id = attrs["id"]
         else:
