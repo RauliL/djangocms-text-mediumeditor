@@ -12,7 +12,7 @@ INSTALL_REQUIRES = [
 
 setup(
     name="djangocms-text-mediumeditor",
-    version="0.1.1",
+    version="0.2.0",
     description="Text plugin for Django CMS which uses Medium editor",
     author="Rauli Laine",
     author_email="rauli.laine@iki.fi",
@@ -27,12 +27,12 @@ setup(
     include_package_data=True,
     zip_safe=False,
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Environment :: Web Environment",
         "Framework :: Django",
-        "Framework :: Django :: 1.10",
-        "Framework :: Django :: 1.9",
-        "Framework :: Django :: 1.8",
+        "Framework :: Django :: 3.2",
+        "Framework :: Django :: 3.1",
+        "Framework :: Django :: 3.0",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
