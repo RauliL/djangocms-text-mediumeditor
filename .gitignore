@@ -2,3 +2,4 @@ __pycache__
 /build
 /dist
 /djangocms_text_mediumeditor.egg-info
+/venv
